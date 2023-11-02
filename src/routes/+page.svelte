@@ -26,9 +26,9 @@
 			Todo Web Application
 		</h2>
 		<!-- input of todo task and image stuff-->
-		<div class="flex justify-evenly items-center">
+		<div class="justify-evenly items-center flex flex-col-reverse md:flex-row">
 			<div
-				class=" w-[60%] rounded-lg m-10 p-4 shadow-lg h-[80vh] bg-violet-950 overflow-scroll no-scrollbar"
+				class=" w-[80%] md:w-[60%] rounded-lg md:m-10 m-4 md:p-4 p-2 shadow-lg h-[40vh] md:h-[80vh] bg-violet-950 overflow-scroll no-scrollbar"
 			>
 				<form action="" class=" " on:submit|preventDefault={handleSubmit}>
 					<label for="" class=" m-5 ml-0 font-serif p-2 text-2xl font-bold text-red-400"
@@ -52,13 +52,13 @@
 						{#each todoData as { id, formData }, i (id)}
 							<div class=" flex justify-between">
 								<p
-									class="no-scrollbar overflow-scroll text-white p-2 w-[85%] h-[10vh] text-xl m-4 rounded-lg shadow-lg bg-green-900"
+									class="no-scrollbar overflow-scroll text-white p-2 w-[100%] md:w-[85%] h-[10vh] md:text-xl text-sm m-4 rounded-lg shadow-lg bg-green-900"
 								>
 									{formData}
 								</p>
 								<div class="flex items-center justify-center mr-4">
 									<button
-										class="bg-green-900 h-[4vh] text-2xl m-2 flex justify-center items-center p-2 rounded-lg"
+										class="bg-green-900 h-[4vh] md:text-2xl text-xl m-2 flex justify-center items-center p-2 rounded-lg"
 										on:click={() => handleRemoveTodo(i)}>❌</button
 									>
 								</div>
@@ -68,12 +68,12 @@
 				</form>
 			</div>
 
-			<div class=" h-[70vh]">
-				<p class=" text-4xl text-center shadow-sm text-yellow-800 font-bold">
+			<div class=" md:h-[70vh] h-[45vh]">
+				<p class=" text-3xl mt-2  md:text-4xl text-center shadow-sm text-yellow-800 font-bold">
 					Keep Track Of Your Work
 				</p>
-				<p class="text-sm text-start ml-[12.5%] mt-2 text-gray-700 font-bold">Be everyday Winner</p>
-				<img src="todo.png" class=" p-4" alt="X" width="600px" />
+				<p class="md:text-sm text-sm text-start md:ml-[12.5%] mt-2 text-gray-700 font-bold">Be everyday Winner</p>
+				<img src="todo.png" class=" p-4 md:w-[600px] w-[350px]" alt="X" />
 			</div>
 		</div>
 	</div>
