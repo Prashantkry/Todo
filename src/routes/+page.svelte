@@ -52,13 +52,13 @@
 						{#each todoData as { id, formData }, i (id)}
 							<div class=" flex justify-between">
 								<p
-									class="no-scrollbar overflow-scroll text-white p-2 w-[100%] md:w-[85%] h-[10vh] md:text-xl text-sm m-4 rounded-lg shadow-lg bg-green-900"
+									class="no-scrollbar overflow-scroll text-white p-1 md:p-2 w-[100%] md:w-[85%] h-[7vh] md:h-[10vh] md:text-xl text-xs m-2 md:m-4 rounded-lg shadow-lg bg-green-900"
 								>
 									{formData}
 								</p>
-								<div class="flex items-center justify-center mr-4">
+								<div class="flex items-center justify-center md:mr-4">
 									<button
-										class="bg-green-900 h-[4vh] md:text-2xl text-xl m-2 flex justify-center items-center p-2 rounded-lg"
+										class="bg-green-900 h-[4vh] md:text-2xl text-sm m-2 flex justify-center items-center p-2 rounded-lg"
 										on:click={() => handleRemoveTodo(i)}>❌</button
 									>
 								</div>
